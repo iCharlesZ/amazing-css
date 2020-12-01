@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="g-container">
+    <div class="g-number" id="powerNum"></div>
+    <div class="g-contrast">
+      <div class="g-circle"></div>
+      <ul class="g-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  let powerNum = 0.5
+  let powerShow = ''
+  let isFullScreen = false
+  power()
+  var timer = window.setInterval(power, 1500)
+  function power() {
+    powerNum += 0.001
+    powerShow = Number(powerNum * 100).toFixed(1) + '%'
+    document.getElementById('powerNum').innerHTML = powerShow
+    if (powerNum >= 1) {
+      clearInterval(timer)
+      document.getElementById('powerNum').innerHTML = '100%'
+    }
+  }
+</script>
+
+</html>
