@@ -10,3 +10,5 @@
 + [用css画一朵云](https://github.com/iCharlesZ/amazing-css/tree/main/cloud-css)
 
 + [clip-path图片故障效果](https://github.com/iCharlesZ/amazing-css/tree/main/img-glitch)
+
++ [css实现抖音风格](https://github.com/iCharlesZ/amazing-css/tree/main/TikTok-style)
