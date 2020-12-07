@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霓虹灯文本</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="neon">amazing css</div>
+
+    <svg width="400" height="200">
+        <filter id="filter-blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+        </filter>
+        <rect x="25" y="30" rx="15" ry="15" width="350" height="100" fill-opacity="1" class="rect-front rect-back" />
+        <rect x="25" y="30" rx="15" ry="15" width="350" height="100" fill-opacity="0" class="rect-front" />
+        <text text-anchor="middle" x="50%" y="50%" fill-opacity="1" class="text-front">
+            霓虹灯效果
+        </text>
+    </svg>
+
+    <svg width="400" height="200">
+        <filter id="filter-blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+        </filter>
+        <rect id="rectid" x="25" y="30" rx="15" ry="15" width="350" height="100" fill-opacity="1" class="rect-front2 rect-back2" />
+        <rect id="rectid" x="25" y="30" rx="15" ry="15" width="350" height="100" fill-opacity="0" class="rect-front2" />
+        <text text-anchor="middle" x="50%" y="50%" fill-opacity="1" class="text-front2 text-1">
+            霓虹灯闪耀
+        </text>
+        <text text-anchor="middle" x="50%" y="50%" fill-opacity="1" class="text-front2 text-2">
+            霓虹灯闪耀
+        </text>
+    </svg>
+</body>
+
+</html>

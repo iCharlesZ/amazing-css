@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+}
+
+// 1.AMAZING CSS
+
+.neon {
+    width: 400px;
+    text-align: center;
+    color: #cce7f8;
+    margin: 80px 0;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    animation: shining 0.1s alternate infinite;
+}
+
+@keyframes shining {
+    from {
+        text-shadow:
+            0 0 6px rgba(182, 211, 207, 0.9),
+            0 0 30px rgba(182, 211, 207, 0.3),
+            0 0 12px rgba(15, 115, 223, 0.5),
+            0 0 21px rgba(15, 115, 223, 0.9),
+            0 0 34px rgba(15, 115, 223, 0.8),
+            0 0 54px rgba(15, 115, 223, 0.9);
+    }
+
+    to {
+        text-shadow:
+            0 0 6px rgba(182, 211, 207, 1),
+            0 0 30px rgba(182, 211, 207, 0.4),
+            0 0 12px rgba(15, 115, 223, 0.6),
+            0 0 22px rgba(15, 115, 223, 0.8),
+            0 0 38px rgba(15, 115, 223, 0.9),
+            0 0 60px rgba(15, 115, 223, 1);
+    }
+}
+
+// 2.霓虹灯效果
+
+.rect-front {
+    stroke: #00ffaa;
+    stroke-width: 2;
+}
+
+.rect-back {
+    stroke-width: 5;
+    filter: url(#filter-blur);
+}
+
+.text-front {
+    font-family: YouYuan;
+    font-size: 64px;
+    font-weight: normal;
+    text-transform: uppercase;
+    stroke: #ff00aa;
+    stroke-width: 2px;
+    text-shadow: 0px 0px 20px #ff00aa;
+}
+
+// 3.霓虹灯闪耀
+
+.rect-front2 {
+    animation: rectchange 2s infinite step-end;
+}
+
+.rect-back2 {
+    stroke-width: 5;
+    filter: url(#filter-blur);
+}
+
+.text-front2 {
+    font-family: YouYuan;
+    font-size: 64px;
+    font-weight: normal;
+    text-transform: uppercase;
+    fill-opacity: 0.3;
+    stroke-width: 2px;
+    stroke-dasharray: 50 50;
+    animation: text-stroke 6s infinite linear;
+}
+
+.text-1 {
+    stroke: #3498db;
+    text-shadow: 0 0 5px #3498db;
+    animation-delay: -3s;
+}
+
+.text-2 {
+    stroke: #f39c12;
+    text-shadow: 0 0 5px #f39c12;
+    animation-delay: -6s;
+}
+
+@keyframes rectchange {
+    0% {
+        stroke: #f39c12;
+        stroke-width: 2;
+        stroke-dasharray: 40 10;
+        stroke-dashoffset: 0%;
+    }
+
+    50% {
+        stroke: #3498db;
+        stroke-width: 2;
+        stroke-dasharray: 40 10;
+        stroke-dashoffset: 50%;
+    }
+
+    100% {
+        stroke: #f39c12;
+        stroke-width: 2;
+        stroke-dasharray: 40 10;
+        stroke-dashoffset: 100%;
+    }
+}
+
+@keyframes text-stroke {
+    100% {
+        stroke-dashoffset: 500;
+    }
+}
