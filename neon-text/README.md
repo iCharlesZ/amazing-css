@@ -2,4 +2,4 @@
 
 [点击查看效果](https://icharlesz.github.io/amazing-css/neon-text/index.html)
 
-![](https://raw.githubusercontent.com/iCharlesZ/FigureBed/master/img/amazing-css/neon-text.gif)
+![demo截图](https://raw.githubusercontent.com/iCharlesZ/FigureBed/master/img/amazing-css/neon-text.gif)

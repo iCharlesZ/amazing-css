@@ -77,7 +77,7 @@ body {
 // 3.霓虹灯闪耀
 
 .rect-front2 {
-    animation: rectchange 2s infinite step-end;
+    animation: rectchange 1s infinite step-end;
 }
 
 .rect-back2 {
@@ -93,40 +93,40 @@ body {
     fill-opacity: 0.3;
     stroke-width: 2px;
     stroke-dasharray: 50 50;
-    animation: text-stroke 6s infinite linear;
+    animation: text-stroke 10s infinite linear;
 }
 
 .text-1 {
     stroke: #3498db;
     text-shadow: 0 0 5px #3498db;
-    animation-delay: -3s;
+    animation-delay: -5s;
 }
 
 .text-2 {
     stroke: #f39c12;
     text-shadow: 0 0 5px #f39c12;
-    animation-delay: -6s;
+    animation-delay: -10s;
 }
 
 @keyframes rectchange {
     0% {
         stroke: #f39c12;
         stroke-width: 2;
-        stroke-dasharray: 40 10;
+        stroke-dasharray: 20 10;
         stroke-dashoffset: 0%;
     }
 
     50% {
         stroke: #3498db;
         stroke-width: 2;
-        stroke-dasharray: 40 10;
-        stroke-dashoffset: 50%;
+        stroke-dasharray: 20 10;
+        stroke-dashoffset: 5%;
     }
 
     100% {
         stroke: #f39c12;
         stroke-width: 2;
-        stroke-dasharray: 40 10;
+        stroke-dasharray: 20 10;
         stroke-dashoffset: 100%;
     }
 }
