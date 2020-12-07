@@ -7,9 +7,17 @@ html,
 body {
   width: 100%;
   height: 100%;
-  display: flex;
-  background: #000;
   overflow: hidden;
+}
+
+.g-container {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
 }
 
 .g-number {
@@ -22,12 +30,6 @@ body {
   font-weight: 900;
   z-index: 10;
   color: #fff;
-}
-
-.g-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .g-contrast {
@@ -48,7 +50,7 @@ body {
   transform: translate(-50%, -50%) rotate(0);
   box-sizing: border-box;
   filter: blur(8px);
-    
+
   &::after {
     content: "";
     position: absolute;
@@ -61,7 +63,7 @@ body {
     border-radius: 42% 38% 62% 49% / 45%;
     animation: rotate 10s infinite linear;
   }
-    
+
   &::before {
     content: "";
     position: absolute;
@@ -94,7 +96,7 @@ li {
   background: #00ff6f;
 }
 
-@for $i from 0 through 15 { 
+@for $i from 0 through 15 {
   li:nth-child(#{$i}) {
     $width: 15 + random(30) + px;
     left: 15 + random(70) + px;
@@ -110,6 +112,7 @@ li {
   50% {
     border-radius: 45% / 42% 38% 58% 49%;
   }
+
   100% {
     transform: translate(-50%, -50%) rotate(720deg);
   }
@@ -119,9 +122,10 @@ li {
   90% {
     opacity: 1;
   }
+
   100% {
     opacity: .1;
-    transform: translate(-50%, -265px);
+    transform: translate(-50%, -360px);
   }
 }
 
