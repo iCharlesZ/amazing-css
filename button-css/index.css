@@ -12,7 +12,7 @@ body {
 body .line {
   --hue: 171;
   width: 100%;
-  height: 220px;
+  height: 240px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,8 +25,8 @@ body .line {
   margin: 0;
   overflow: hidden;
   position: relative;
-  background: #212121;
-  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  background: #222222;
+  border-bottom: 2px solid #303030;
 }
 
 body .line:last-of-type {
@@ -73,7 +73,7 @@ body .line .tips::after {
   width: 0px;
   height: 0px;
   border: 8px solid transparent;
-  border-right-color: #212121;
+  border-right-color: #222222;
   position: absolute;
   right: 100%;
   top: 50%;
@@ -340,8 +340,8 @@ body .line .tips::after {
   display: block;
   width: var(--burger-menu-radius);
   height: var(--burger-menu-radius);
-  background: #212121;
-  border: solid 2px hsla(var(--hue), 100%, 41%, 0.15);
+  background: #222222;
+  border: solid 2px hsla(var(--hue), 100%, 41%, 0.5);
   border-radius: 50%;
   outline: none;
   cursor: pointer;
@@ -354,7 +354,7 @@ body .line .tips::after {
   left: 25%;
   width: 50%;
   height: 3px;
-  background: hsla(var(--hue), 100%, 41%, 0.35);
+  background: hsla(var(--hue), 100%, 41%, 0.5);
   border-radius: 10px;
   overflow: hidden;
   -webkit-transition: all 0.5s ease;

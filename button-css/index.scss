@@ -9,19 +9,22 @@ body {
     height: 100%;
 }
 
+$color-bg: #222222;
+$color-border: #303030;
+
 body {
     .line {
         --hue: 171;
         width: 100%;
-        height: 220px;
+        height: 240px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
         overflow: hidden;
         position: relative;
-        background: #212121;
-        border-bottom: 3px solid hsla(170, 100%, 100%, 0.1);
+        background: $color-bg;
+        border-bottom: 2px solid $color-border;
 
         &:last-of-type {
             border: 0;
@@ -60,7 +63,7 @@ body {
                 width: 0px;
                 height: 0px;
                 border: 8px solid transparent;
-                border-right-color: #212121;
+                border-right-color: $color-bg;
                 ;
                 position: absolute;
                 right: 100%;
@@ -71,6 +74,8 @@ body {
         }
     }
 }
+
+
 
 .line1 {
     .btn {
@@ -218,6 +223,8 @@ body {
     }
 }
 
+
+
 .line2 {
     .btn {
         --hue: 171;
@@ -266,13 +273,12 @@ body {
     }
 }
 
+
+
 .line3 {
     --hue: 171;
 
     #burger-toggle {
-        // appearance: none;
-        // opacity: 0;
-
         &:checked {
             &~.overlay {
                 opacity: 1;
@@ -304,8 +310,8 @@ body {
         display: block;
         width: var(--burger-menu-radius);
         height: var(--burger-menu-radius);
-        background: #212121;
-        border: solid 2px hsla(var(--hue), 100%, 41%, 0.15);
+        background: $color-bg;
+        border: solid 2px hsla(var(--hue), 100%, 41%, .5);
         border-radius: 50%;
         outline: none;
         cursor: pointer;
@@ -316,7 +322,7 @@ body {
             left: 25%;
             width: 50%;
             height: 3px;
-            background: hsla(var(--hue), 100%, 41%, 0.35);
+            background: hsla(var(--hue), 100%, 41%, .5);
             border-radius: 10px;
             overflow: hidden;
             transition: all 0.5s ease;
@@ -375,6 +381,8 @@ body {
     }
 }
 
+
+
 .line4 {
     --light-switch-radius: 3rem;
     $toggleBtnColor: #dfdfdf;
@@ -383,9 +391,6 @@ body {
     $toggleActiveColor: #00e0a8;
 
     #light-switch {
-        // appearance: none;
-        // opacity: 0;
-
         &:checked {
             &~.light {
                 opacity: 1;
@@ -449,6 +454,10 @@ body {
     }
 }
 
+
+
 .line5 {}
+
+
 
 .line6 {}
