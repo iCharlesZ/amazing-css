@@ -276,6 +276,60 @@ body {
 
 
 .line3 {
+    .btn {
+        position: relative;
+        z-index: 1;
+        width: 140px;
+        height: 60px;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-decoration: none;
+        color: $color-bg;
+        background-color: hsla(var(--hue), 100%, 41%, 0.5);
+        border: 0;
+        outline: transparent;
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+        transition: .8s ease all;
+        outline: none;
+
+        &:hover {
+            background-color: transparent;
+            color: hsla(var(--hue), 100%, 41%, 0.5);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background: hsla(var(--hue), 100%, 41%, 0.5);
+            transition: .4s ease all;
+        }
+
+        &::before {
+            top: 0;
+            right: 0;
+        }
+
+        &::after {
+            left: 0;
+            bottom: 0;
+        }
+
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+            transition: .8s ease all;
+        }
+    }
+}
+
+
+
+.line4 {
     --hue: 171;
 
     #burger-toggle {
@@ -383,7 +437,7 @@ body {
 
 
 
-.line4 {
+.line5 {
     --light-switch-radius: 3rem;
     $toggleBtnColor: #dfdfdf;
     $toggleBgColor: #111;
@@ -456,8 +510,8 @@ body {
 
 
 
-.line5 {}
-
-
-
 .line6 {}
+
+
+
+.line7 {}

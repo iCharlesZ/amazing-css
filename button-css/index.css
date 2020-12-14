@@ -308,32 +308,86 @@ body .line .tips::after {
           transform: rotate(30deg) translate(50px, -80px);
 }
 
-.line3 {
+.line3 .btn {
+  position: relative;
+  z-index: 1;
+  width: 140px;
+  height: 60px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  color: #222222;
+  background-color: hsla(var(--hue), 100%, 41%, 0.5);
+  border: 0;
+  outline: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+  -webkit-transition: .8s ease all;
+  transition: .8s ease all;
+  outline: none;
+}
+
+.line3 .btn:hover {
+  background-color: transparent;
+  color: hsla(var(--hue), 100%, 41%, 0.5);
+}
+
+.line3 .btn::before, .line3 .btn::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background: hsla(var(--hue), 100%, 41%, 0.5);
+  -webkit-transition: .4s ease all;
+  transition: .4s ease all;
+}
+
+.line3 .btn::before {
+  top: 0;
+  right: 0;
+}
+
+.line3 .btn::after {
+  left: 0;
+  bottom: 0;
+}
+
+.line3 .btn:hover::before, .line3 .btn:hover::after {
+  width: 100%;
+  -webkit-transition: .8s ease all;
+  transition: .8s ease all;
+}
+
+.line4 {
   --hue: 171;
 }
 
-.line3 #burger-toggle:checked ~ .overlay {
+.line4 #burger-toggle:checked ~ .overlay {
   opacity: 1;
   -webkit-transform: scale(130);
           transform: scale(130);
 }
 
-.line3 #burger-toggle:checked ~ .burger-menu .btn-line:nth-child(1) {
+.line4 #burger-toggle:checked ~ .burger-menu .btn-line:nth-child(1) {
   -webkit-transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
           transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
 }
 
-.line3 #burger-toggle:checked ~ .burger-menu .btn-line:nth-child(2) {
+.line4 #burger-toggle:checked ~ .burger-menu .btn-line:nth-child(2) {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
 }
 
-.line3 #burger-toggle:checked ~ .burger-menu .btn-line:nth-child(3) {
+.line4 #burger-toggle:checked ~ .burger-menu .btn-line:nth-child(3) {
   -webkit-transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
           transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
 }
 
-.line3 .burger-menu {
+.line4 .burger-menu {
   --burger-menu-radius: 4rem;
   position: relative;
   z-index: 100;
@@ -349,7 +403,7 @@ body .line .tips::after {
   transition: 0.5s ease-in-out;
 }
 
-.line3 .burger-menu .btn-line {
+.line4 .burger-menu .btn-line {
   position: absolute;
   left: 25%;
   width: 50%;
@@ -361,19 +415,19 @@ body .line .tips::after {
   transition: all 0.5s ease;
 }
 
-.line3 .burger-menu .btn-line:nth-child(1) {
+.line4 .burger-menu .btn-line:nth-child(1) {
   top: 30%;
 }
 
-.line3 .burger-menu .btn-line:nth-child(2) {
+.line4 .burger-menu .btn-line:nth-child(2) {
   top: 50%;
 }
 
-.line3 .burger-menu .btn-line:nth-child(3) {
+.line4 .burger-menu .btn-line:nth-child(3) {
   top: 70%;
 }
 
-.line3 .burger-menu .btn-line::after {
+.line4 .burger-menu .btn-line::after {
   position: absolute;
   content: "";
   top: 0;
@@ -387,28 +441,28 @@ body .line .tips::after {
   transition: all 0.25s ease;
 }
 
-.line3 .burger-menu .btn-line:nth-child(2)::after {
+.line4 .burger-menu .btn-line:nth-child(2)::after {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
 
-.line3 .burger-menu .btn-line:nth-child(3)::after {
+.line4 .burger-menu .btn-line:nth-child(3)::after {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
 
-.line3 .burger-menu:hover {
+.line4 .burger-menu:hover {
   border-color: hsla(var(--hue), 100%, 41%, 1);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
 }
 
-.line3 .burger-menu:hover .btn-line::after {
+.line4 .burger-menu:hover .btn-line::after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.line3 .overlay {
+.line4 .overlay {
   position: absolute;
   z-index: 2;
   width: 2rem;
@@ -421,26 +475,26 @@ body .line .tips::after {
   will-change: transform;
 }
 
-.line4 {
+.line5 {
   --light-switch-radius: 3rem;
 }
 
-.line4 #light-switch:checked ~ .light {
+.line5 #light-switch:checked ~ .light {
   opacity: 1;
   -webkit-transform: scale(130);
           transform: scale(130);
 }
 
-.line4 #light-switch:checked ~ .light-switch-label {
+.line5 #light-switch:checked ~ .light-switch-label {
   -webkit-box-shadow: 0 0px 8px 0 #00ad82, 0 0 0 3px #00e0a8, 0 0 30px 0 #00e0a8, 0 0 0 6px #777777;
           box-shadow: 0 0px 8px 0 #00ad82, 0 0 0 3px #00e0a8, 0 0 30px 0 #00e0a8, 0 0 0 6px #777777;
 }
 
-.line4 #light-switch:checked ~ .light-switch-label i {
+.line5 #light-switch:checked ~ .light-switch-label i {
   color: #00e0a8;
 }
 
-.line4 .light-switch-label {
+.line5 .light-switch-label {
   position: relative;
   z-index: 100;
   display: -webkit-box;
@@ -464,16 +518,16 @@ body .line .tips::after {
   cursor: pointer;
 }
 
-.line4 .light-switch-label i {
+.line5 .light-switch-label i {
   font-size: 32px;
   color: #aaaaaa;
 }
 
-.line4 .light-switch-label:hover i {
+.line5 .light-switch-label:hover i {
   color: #777777;
 }
 
-.line4 .light {
+.line5 .light {
   position: absolute;
   z-index: 2;
   width: 2rem;
