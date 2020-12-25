@@ -487,6 +487,7 @@ body {
 
         i {
             font-size: 32px;
+            height: 32px;
             color: #aaaaaa;
         }
 
@@ -802,6 +803,7 @@ body {
             position: relative;
             z-index: 1;
             display: block;
+            width: 84px;
             padding: 15px 23px;
             background-image: linear-gradient(#333, #222);
             text-align: center;

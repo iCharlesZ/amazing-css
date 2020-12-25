@@ -523,6 +523,7 @@ body .line .tips::after {
 
 .line5 .light-switch-label i {
   font-size: 32px;
+  height: 32px;
   color: #aaaaaa;
 }
 
@@ -830,6 +831,7 @@ body .line .tips::after {
   position: relative;
   z-index: 1;
   display: block;
+  width: 84px;
   padding: 15px 23px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222));
   background-image: linear-gradient(#333, #222);
