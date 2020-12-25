@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: "微软雅黑";
+            font-size: 60px;
+            border-right: 0.1em solid;
+            width: 13em;
+            margin: 1em;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 5s steps(13, end),
+                cursor-blink 0.5s step-end infinite alternate;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes cursor-blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>文字输入效果文字输入效果。</h1>
+</body>
+
+</html>

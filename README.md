@@ -16,3 +16,5 @@
 + [css实现抖音风格](https://github.com/iCharlesZ/amazing-css/tree/main/tiktok-style)
 
 + [css实现按钮动效](https://github.com/iCharlesZ/amazing-css/tree/main/button-css)
+
++ [css实现文字输入效果](https://github.com/iCharlesZ/amazing-css/tree/main/typing-css)
