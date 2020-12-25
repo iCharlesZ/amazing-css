@@ -471,8 +471,8 @@ body .line .tips::after {
   background: hsla(var(--hue), 100%, 20%, 1);
   border-radius: 50%;
   opacity: 0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   will-change: transform;
 }
 
@@ -484,6 +484,8 @@ body .line .tips::after {
   opacity: 1;
   -webkit-transform: scale(130);
           transform: scale(130);
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
 }
 
 .line5 #light-switch:checked ~ .light-switch-label {
@@ -536,8 +538,8 @@ body .line .tips::after {
   background: #dfdfdf;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
   will-change: transform;
 }
 
@@ -785,6 +787,8 @@ body .line .tips::after {
   opacity: 1;
   -webkit-transform: scale(130);
           transform: scale(130);
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
 }
 
 .line6 .day-mode {
@@ -799,8 +803,135 @@ body .line .tips::after {
   background: #fff;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
   will-change: transform;
+}
+
+.line7 * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.line7 .buttons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 7px;
+  background-color: #000000;
+  border: 2px solid #000000;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.55);
+}
+
+.line7 .buttons-wrapper > label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 15px 23px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222));
+  background-image: linear-gradient(#333, #222);
+  text-align: center;
+  margin: 0 1px;
+  border-radius: 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all .175s ease;
+  transition: all .175s ease;
+}
+
+.line7 .buttons-wrapper > label:first-of-type {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 0;
+}
+
+.line7 .buttons-wrapper > label:last-of-type {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 0;
+}
+
+.line7 .buttons-wrapper > label:hover {
+  z-index: 2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#373737), to(#262626));
+  background-image: linear-gradient(#373737, #262626);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.line7 .buttons-wrapper > label i {
+  color: #424242;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+  font-size: 36px;
+}
+
+.line7 .buttons-wrapper > input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  opacity: 0;
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label {
+  z-index: 3;
+  cursor: default;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#202020), to(#151515));
+  background-image: linear-gradient(#202020, #151515);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0.55);
+  border-right-color: rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(255, 255, 255, 0.06);
+          box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.5), 0 10px 20px rgba(255, 255, 255, 0.06);
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label:first-of-type:before {
+  display: none;
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label:last-of-type:after {
+  display: none;
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label:after, .line7 .buttons-wrapper > input[type="radio"]:checked + label:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), color-stop(rgba(2, 165, 238, 0.4)), to(rgba(0, 0, 0, 0.25)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(2, 165, 238, 0.4), rgba(0, 0, 0, 0.25));
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label:before {
+  left: -4px;
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label:after {
+  right: -4px;
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label i {
+  color: white;
+  text-shadow: 0 0 10px rgba(2, 165, 238, 0.75);
+}
+
+.line7 .buttons-wrapper > input[type="radio"]:checked + label i:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 80px;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0.045)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0));
 }
 /*# sourceMappingURL=index.css.map */
