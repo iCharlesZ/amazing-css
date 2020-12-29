@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css彩色阴影</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            border-radius: 50%;
+            background: url('./avatar.jpeg') no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .avatar::after {
+            content: "";
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            background: inherit;
+            background-size: 110% 110%;
+            border-radius: 50%;
+            filter: blur(10px) brightness(90%) opacity(.85);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="avatar"></div>
+</body>
+</html>
