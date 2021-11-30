@@ -20,3 +20,5 @@
 + [css实现文字输入效果](https://github.com/iCharlesZ/amazing-css/tree/main/typing-css)
 
 + [css实现彩色阴影](https://github.com/iCharlesZ/amazing-css/tree/main/color-shade)
+
++ [css实现图片伪像素风](https://github.com/iCharlesZ/amazing-css/tree/main/picture-pixel-style)

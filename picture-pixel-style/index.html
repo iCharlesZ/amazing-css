@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片伪像素风</title>
+  <style>
+    .mask-group {
+      width: 128px;
+      height: 128px;
+      display: grid;
+      grid-template-columns: repeat(32, 1fr);
+      grid-template-rows: repeat(32, 1fr);
+      grid-row-gap: 1px;
+      grid-column-gap: 1px;
+    }
+
+    .mask-item {
+      background-image: url("./mario.png");
+      -webkit-mask-image: url('https://icharlesz.github.io/amazing-css/picture-pixel-style/all-black.png');
+      mask-image: url('https://icharlesz.github.io/amazing-css/picture-pixel-style/all-black.png');
+      filter: blur(2px) saturate(2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mask-group"></div>
+  <script>
+    const el = document.querySelector('.mask-group')
+    for (let i = 0; i < 1024; i++) {
+      const itemEl = document.createElement('div')
+      itemEl.className = 'mask-item'
+      el.appendChild(itemEl)
+      itemEl.style.backgroundPosition = `-${Math.floor(i % 32) * 4}px -${Math.floor(i / 32) * 4}px `
+    }
+  </script>
+</body>
+
+</html>
